@@ -1,0 +1,60 @@
+﻿@model IEnumerable<B2B.Models.Products>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Products</h2>
+
+@using (Html.BeginForm())
+{
+
+    <input type="text" id="searchTerm" name="searchTerm" class="input-lg" placeholder="Search" />
+        <input type="submit" class="btn btn-info" value="Search" onclick="location.href='@Url.Action("productsSearch", "Products")'" />
+     @Html.DropDownList("Suppliers", "Select Supplier")
+
+        @*@Html.DropDownList("Sort","Sort By");*@
+
+        @*@Html.DropDownList("Sortby", new SelectListItem[]
+            { new SelectListItem() { Text = "Sort By", Value = " " },
+              new SelectListItem() { Text = "Sort By Name", Value = "SortByName" },
+              new SelectListItem() { Text = "Sort By Price", Value = "SortByPrice" }},
+                  new { onchange = @"form.submit();" })*@
+
+
+        if(Session["username"] != null)
+        {
+        <h4>Hello @Session["username"].ToString()</h4>
+        }
+
+        <table class="table table-bordered" border="1" cellpadding="2" cellspacing="2">
+            <tr>
+                <th style="visibility:hidden"></th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Description</th>
+                <th>Supplier Name</th>
+                <th>Product Image</th>
+                <th>Product Price</th>
+            </tr>
+
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td><input type="hidden" name="id" value="@product.Id" /> </td>
+                    <td>@product.Id</td>
+                    <td>@product.ProductName</td>
+                    <td>@product.ProductDescription</td>
+                    <td>@product.SupplierName</td>
+                    <td><img src="@product.Image" /></td>
+                    <td>$@product.Price</td>
+                    @*<td>@Html.CheckBox("IsSelected", @product.Id) </td>*@
+                    @*<td><input type="checkbox" value="@product.Id" name="IsSelected" id="@product.Id" /></td>*@
+                    <td>@Html.ActionLink("Add to Cart", "cart", "ShoppingCart", new { id = product.Id }, null)</td>
+                    @*<td><input type="submit" value="Add all to Cart" onclick="location.href='@Url.Action("add", "ShoppingCart")'" /></td>*@
+                </tr>
+            }
+
+        </table>
+    
+}

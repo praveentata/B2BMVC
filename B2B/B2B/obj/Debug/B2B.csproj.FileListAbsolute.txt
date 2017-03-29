@@ -1,0 +1,54 @@
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\B2B.dll.config
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\B2B.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\B2B.pdb
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\EntityFramework.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\Newtonsoft.Json.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.Helpers.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.Mvc.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.Razor.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.WebPages.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\EntityFramework.xml
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\Newtonsoft.Json.xml
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.Helpers.xml
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.Mvc.xml
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.Razor.xml
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.WebPages.xml
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\obj\Debug\B2B.dll
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\obj\Debug\B2B.pdb
+C:\Users\HP\documents\visual studio 2013\Projects\B2B\B2B\obj\Debug\B2B.csprojResolveAssemblyReference.cache
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\B2B.dll.config
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\B2B.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\B2B.pdb
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\EntityFramework.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\Microsoft.Web.Infrastructure.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\Newtonsoft.Json.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Net.Http.Formatting.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Helpers.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Http.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Http.WebHost.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Mvc.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Razor.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.WebPages.Deployment.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.WebPages.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.WebPages.Razor.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\EntityFramework.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\Newtonsoft.Json.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Net.Http.Formatting.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Helpers.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Http.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Http.WebHost.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Mvc.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.Razor.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.WebPages.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.WebPages.Deployment.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\bin\System.Web.WebPages.Razor.xml
+E:\Master's\Fourth Semester\Project\B2B\B2B\obj\Debug\B2B.csprojResolveAssemblyReference.cache
+E:\Master's\Fourth Semester\Project\B2B\B2B\obj\Debug\B2B.dll
+E:\Master's\Fourth Semester\Project\B2B\B2B\obj\Debug\B2B.pdb

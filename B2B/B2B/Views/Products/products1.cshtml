@@ -1,0 +1,35 @@
+﻿@model B2B.Models.ProductsSearch
+
+@{
+    ViewBag.Title = "products1";
+}
+
+<h2>Products</h2>
+@using (Html.BeginForm())
+{ <input type="text" id="searchTerm" name="searchTerm" value=@Model.Search  />
+    <input type="button" value="Search" onclick="location.href='@Url.Action("productsSearch", "Products")'" />
+
+}
+
+    <table style="border:5px; color:black;">
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Product Image</th>
+            <th>Product Price</th>
+        </tr>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.ProductName</td>
+                <td>@product.ProductDescription</td>
+                <td><img src="@product.Image" /></td>
+                <td>$@product.Price</td>
+            </tr>
+        }
+
+    </table>
+
+

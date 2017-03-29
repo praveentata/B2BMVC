@@ -1,0 +1,68 @@
+﻿@model IEnumerable<B2B.Models.supplier_inv>
+@using B2B.Models;
+
+@{
+    ViewBag.Title = "sendPO";
+}
+
+<h2>sendPO</h2>
+
+<p>
+</p>
+<h4>@ViewBag.Message</h4>
+<table border="1" cellpadding="2" cellspacing="2">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PO_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shopping_date)
+        </th>
+        <th>
+            <p>View Details</p>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        
+        <tr>
+            <td> 
+                @Html.DisplayFor(modelItem => item.PO_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shopping_date)
+            </td>
+            
+            <td>
+                @Html.ActionLink("View Details", "Details", new { id = item.PO_ID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<B2B.Models.supplier_inv>
+
+@{
+    ViewBag.Title = "Invoice";
+}
+
+<h2>Invoice</h2>
+
+@using (Html.BeginForm("Invoice", "PO", FormMethod.Post))
+{
+
+    @Html.TextBox("search")
+    <input type="submit" value="Search" onclick="location.href='@Url.Action("Search", "Invoice")'" />
+    
+
+<table border="1" cellpadding="2" cellspacing="2">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PO_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shopping_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PO_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_id)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shopping_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.ActionLink("Approve", "ApproveInvoice", "Invoice", new { id = item.PO_ID }, null)
+            </td>
+        </tr>
+    }
+
+</table>
+}

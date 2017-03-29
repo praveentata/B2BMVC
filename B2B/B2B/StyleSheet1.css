@@ -1,0 +1,36 @@
+﻿a:hover{
+    background-color:black;
+  
+    
+}
+
+.container{
+    background-color: #e6e6e6;
+}
+
+.body
+{
+    height : 1000px;
+}
+
+.nav navbar-nav{
+    color:green;
+    font:bold;
+}
+
+#password
+{
+    margin: 10px;
+}
+
+#username
+{
+    margin-left: 5px;
+}
+
+#footer
+{
+    
+    margin-top: 150px;
+    width: inherit;
+}

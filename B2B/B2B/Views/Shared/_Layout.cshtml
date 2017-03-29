@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    
+    
+
+    <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href=@Url.Content("~/StyleSheet1.css") rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body class="container">
+
+    <div class="row container-fluid" style=" background-color: #FFC300">
+
+        <div class="col-lg-4"> <img src="~/Images/Logo.PNG" /> </div>
+        <div class="col-lg-4"><h3>TATA SOLUTIONS</h3></div>
+        @if(Session["username"] != null)
+        { 
+            <div class="col-lg-4">@Html.ActionLink("Logout", "Login", "Login", new { @class = "btn btn-primary" })</div>
+        }
+    </div>
+            
+
+       <div class="row">
+       
+        @RenderBody()</div>
+
+   
+    <div id="footer" class="col-md-10 modal-footer" style="background-color:#FF5733; color:white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font:bold;">
+        © Copyright 2016. Praveen Kumar Tata. ISAM 5338
+    </div>
+</body>

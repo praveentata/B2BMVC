@@ -1,0 +1,75 @@
+﻿@model B2B.Models.UserRegistration
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <h4>@Html.ActionLink("Login", "Login", "Login")</h4>
+
+    <div>@Html.LabelFor(model => model.first_name, "First Name")</div>
+
+    <div>@Html.EditorFor(model => model.first_name)
+         @Html.ValidationMessageFor(model => model.first_name, "", new { @style = "color:red" })
+    </div>
+
+    <div>@Html.LabelFor(model => model.last_name, "Last Name")</div>
+
+    <div>
+        @Html.EditorFor(model => model.last_name)
+        @Html.ValidationMessageFor(model => model.last_name, "", new { @style = "color:red" })
+    </div>
+
+    <div>@Html.LabelFor(model => model.user_name, "User Name")</div>
+
+    <div>
+        @Html.EditorFor(model => model.user_name)
+        @Html.ValidationMessageFor(model => model.user_name, "", new { @style = "color:red" })
+    </div>
+
+    <div>@Html.LabelFor(model => model.user_role, "User Role")</div>
+
+    <div>
+        @Html.DropDownListFor(model => model.user_role, new List<SelectListItem>
+    {
+                        new SelectListItem() {Text = "Buyer", Value="buyer"},
+                        new SelectListItem() {Text = "Supplier", Value="supplier"}
+    }, "Select Role") 
+        @Html.ValidationMessageFor(model => model.user_role, "", new { @style = "color:red" })
+    </div>
+
+    <div>@Html.LabelFor(model => model.email, "Email")</div>
+
+    <div>
+        @Html.EditorFor(model => model.email)
+        @Html.ValidationMessageFor(model => model.email, "", new { @style = "color:red" })
+    </div>
+
+    <div>@Html.LabelFor(model => model.password, "Password")</div>
+
+    <div>
+        @Html.PasswordFor(model => model.password)
+        @Html.ValidationMessageFor(model => model.password, "", new { @style = "color:red" })
+    </div>
+
+    <div>@Html.LabelFor(model => model.confirm_password, "Confirm Password")</div>
+
+    <div>
+        @Html.PasswordFor(model => model.confirm_password)
+        @Html.ValidationMessageFor(model => model.confirm_password, "", new { @style = "color:red" })
+    </div>
+    
+    <div>
+        <input type="submit" value="Register"/>
+    </div>
+
+
+}
+
+

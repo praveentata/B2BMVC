@@ -1,0 +1,58 @@
+﻿@model B2B.Models.Item
+
+@{
+    ViewBag.Title = "cart";
+}
+@using B2B.Controllers;
+@using B2B.Models;
+<html>
+<h2>cart</h2>
+<body>
+    @using (Html.BeginForm("Update", "ShoppingCart", FormMethod.Post))
+    {
+        
+    <table border="1" cellpadding="2" cellspacing="2">
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Product Image</th>
+            <th>Product Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Remove</th>
+        </tr>
+
+        @{double subTotal = 0;}
+
+        @foreach (Item product in (List<Item>)Session["cart"])
+        {
+            subTotal = subTotal + (product.Product.Price * product.Quantity);
+
+            <tr>
+                
+                <td>@product.Product.Id</td>
+                <td>@product.Product.ProductName</td>
+                <td>@product.Product.ProductDescription</td>
+                <td><img src="@product.Product.Image" /></td>
+                <td>@product.Product.Price</td>
+                <td><input type="text" value="@product.Quantity" name="quantity" /></td>
+                <td><input type="submit" value="Update" /> </td>
+                <td>$@(product.Product.Price * product.Quantity)</td>
+                <td>@Html.ActionLink("Delete", "Delete", "ShoppingCart", new { id = product.Product.Id }, null)</td>
+                <td style="display:none"><input type="hidden" name="id" value="@product.Product.Id" /></td>
+            </tr>
+
+        }
+
+        <tr>
+            <td align="right" colspan="8"> Subtotal :$ @subTotal </td>
+        </tr>
+    </table>
+    }
+    <br />
+    <input type="submit" value="Generate PO" style="align-items:flex-end" onclick="location.href='@Url.Action("poCart", "ShoppingCart")'" />
+    @Html.ActionLink("Continue Shopping", "products", "Products")
+</body>
+</html>
+@*<input type="submit" value="Continue Shopping" onclick="location.href='@Url.Action("products", "Products")'" />*@

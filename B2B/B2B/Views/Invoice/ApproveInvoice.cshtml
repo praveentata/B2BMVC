@@ -1,0 +1,100 @@
+﻿@model IEnumerable<B2B.Models.supplier_inv>
+
+@{
+    ViewBag.Title = "ApproveInvoice";
+}
+
+<h2>ApproveInvoice</h2>
+
+<h3>INV_@ViewBag.InvoiceID</h3>
+@using (Html.BeginForm())
+{
+    <h3>@Html.ActionLink("Back to List", "Invoice", "PO")</h3>
+    
+<table border="1" cellpadding="2" cellspacing="2">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PO_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.product_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shopping_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th></th>
+    </tr>
+
+    @{double? subTotal = 0;}
+    @foreach (var item in Model)
+    {
+
+        subTotal = subTotal + (item.quantity * item.Price);
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PO_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.product_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SupplierId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductDescription)
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.Image)" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.shopping_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+        </tr>
+        <tr>
+            <td align="right" colspan="8"> Subtotal :$ @subTotal </td>
+        </tr>
+    }
+
+</table>
+    
+    <h3>@Html.ActionLink("Back to List", "Invoice", "PO")</h3>
+}
